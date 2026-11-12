@@ -1,5 +1,5 @@
 import {fresh,begin,submit,advance,finish,reviews,stats,sizes,validateState} from './core.js';
-import {CLOUD_KEY as STORAGE_KEY,LEGACY_KEY,CloudSync,mergeStates} from './cloud.js';
+import {CLOUD_KEY as STORAGE_KEY,LEGACY_KEY,CloudSync,mergeStates} from './cloud.js?v=3';
 const $=s=>document.querySelector(s),main=$('#main'),nav=$('#nav'),dialog=$('#dialog');
 const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const drawings={home:'M3 10 12 3l9 7v10a1 1 0 0 1-1 1h-5v-7H9v7H4a1 1 0 0 1-1-1Z',random:'M3 6h3c5 0 7 12 12 12h3m-4-4 4 4-4 4M3 18h3c2 0 3-2 5-5m3-4c1-2 2-3 4-3h3m-4-4 4 4-4 4',review:'M3 10a9 9 0 1 1 1 8M3 4v6h6M12 7v5l3 2',records:'M4 21V12h4v9m3 0V4h4v17m3 0V8h4v13',fire:'M12 3c2 5 6 6 6 11a6 6 0 0 1-12 0c0-3 1-5 3-7 0 4 2 4 3 6 2-3 0-5 0-10Z',traffic:'m3 12 2-6h14l2 6v7h-3v-3H6v3H3Zm0 0h18M7 8h10M7 13h.1M17 13h.1',electric:'m13 2-9 12h7l-1 8 10-13h-8Z',health:'M12 21 4 13C-3 6 6 0 12 7c6-7 15-1 8 6ZM4 11h4l2-3 3 7 2-4h5',food:'M12 3v18M12 11C4 12 3 7 3 4c7-1 9 3 9 7Zm0 5c8 1 9-4 9-7-7-1-9 3-9 7Z',outdoor:'m2 20 7-13 4 7 3-5 6 11Zm4-7h6m3 1h4M17 3v2',protection:'M12 2 3 6v6c0 5 9 10 9 10s9-5 9-10V6ZM8 12l3 3 5-6',daily:'M3 4c4-1 6 0 9 2 3-2 5-3 9-2v15c-4-1-7 0-9 2-2-2-5-3-9-2ZM12 6v15',arrow:'m9 5 7 7-7 7',check:'m5 12 4 4L20 5',close:'m6 6 12 12M6 18 18 6',back:'m15 5-7 7 7 7'};
